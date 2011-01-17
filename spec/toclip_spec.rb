@@ -12,4 +12,12 @@ describe "Toclip" do
     Clipboard.should_receive(:copy).with(object.inspect)
     object.toclip.should == object
   end
+
+  describe "String#to_clip" do
+    it "should not call inspect" do
+      object = "foo"
+      Clipboard.should_receive(:copy).with(object)
+      object.to_clip
+    end
+  end
 end
