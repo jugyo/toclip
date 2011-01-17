@@ -6,4 +6,10 @@ describe "Toclip" do
     PB.should_receive(:copy).with(object.inspect)
     object.to_clip.should == object
   end
+
+  it "alias_method :toclip, :to_clip" do
+    object = Object.new
+    PB.should_receive(:copy).with(object.inspect)
+    object.toclip.should == object
+  end
 end
