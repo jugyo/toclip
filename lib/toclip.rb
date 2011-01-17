@@ -1,8 +1,8 @@
-require 'pb'
+require 'clipboard'
 
 module ToClip
   def to_clip
-    PB.copy self.inspect
+    Clipboard.copy self.inspect
     self
   end
   alias_method :toclip, :to_clip
