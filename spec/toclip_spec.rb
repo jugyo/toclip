@@ -20,4 +20,12 @@ describe "Toclip" do
       object.to_clip
     end
   end
+
+  describe "to_clip with an arg" do
+    it "calls Clipboard.copy with the arg" do
+      object = "foo"
+      Clipboard.should_receive(:copy).with(object)
+      to_clip(object)
+    end
+  end
 end
