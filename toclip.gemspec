@@ -3,7 +3,7 @@ $:.push File.expand_path("../lib", __FILE__)
 
 Gem::Specification.new do |s|
   s.name        = "toclip"
-  s.version     = "0.2.0"
+  s.version     = "0.3.0"
   s.authors     = ["jugyo"]
   s.email       = ["jugyo.org@gmail.com"]
   s.homepage    = ""
